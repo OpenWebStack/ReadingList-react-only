@@ -10,4 +10,6 @@ const Actions = ({toggleIconActive, toggleIconInactive, isActive=false, deleteIc
             {rating}
         </div>
     </div>
-)
+);
+
+export default Actions;
