@@ -29,11 +29,13 @@ class SimpleForm extends Component {
 
     render() {
         return (
-            <div>
-                <span>Add book by Title or ISBN: </span>
+            <div className={styles.container}>
+                <span className={styles.title} >Add book by Title or ISBN: </span>
                 <input type="text" value={this.state.textValue} onChange={this.handleChange} />
                 <button onClick={this.handleSubmit}>Add Book</button>
             </div>
         )
     }
 }
+
+export default SimpleForm;

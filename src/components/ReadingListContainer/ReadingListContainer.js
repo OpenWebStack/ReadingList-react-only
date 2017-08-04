@@ -35,7 +35,7 @@ class ReadingListContainer extends Component {
 
     getMyBooks() {
         const bookIds = this.state.myBooks;
-        const {bookOjbects} = this.state;
+        const {bookObjects} = this.state;
 
         return bookIds.map(id => bookObjects[id]);
     }

@@ -1,9 +1,37 @@
 .grid {
-    display: grid;
-    grid-template-columns: 1fr, 3fr;
-    grid-gap: 10px;
+    font-family: sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 3px hsla(0, 0%, 0%, 0.15);
+    padding: 10px;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.grid:hover {
+    background-color: #f7f7fb;
 }
 
 .image {
     grid-column: 1 / span 1;
+    width: 100%;
+}
+
+.title {
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+.meta {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    color: #777;
+    font-weight: 100;
 }
