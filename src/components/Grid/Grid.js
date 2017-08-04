@@ -6,9 +6,9 @@ const Grid = ({className, columns="1fr 1fr", rows="auto", gap="10", ...props}) =
     
     const styles = {
         "display": "grid",
-        "grid-template-columns": columns,
-        "grid-template-rows": rows,
-        "grid-gap": gap,
+        "gridTemplateColumns": columns,
+        "gridTemplateRows": rows,
+        "gridGap": gap + "px",
     };
 
     return (
