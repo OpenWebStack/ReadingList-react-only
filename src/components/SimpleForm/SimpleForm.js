@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './styles.css';
+import Grid from "../Grid";
 
 class SimpleForm extends Component {
 
@@ -16,8 +16,8 @@ class SimpleForm extends Component {
     }
 
     handleSubmit(e) {
-        const {onAdd} = this.props;
 
+        const {onAdd} = this.props;
         onAdd(this.state.textValue);
 
         this.setState({textValue: ""});
@@ -29,11 +29,11 @@ class SimpleForm extends Component {
 
     render() {
         return (
-            <div className={styles.container}>
+            <Grid className={styles.container} columns="1fr 1fr 1fr" gap="15" >
                 <span className={styles.title} >Add book by Title or ISBN: </span>
-                <input type="text" value={this.state.textValue} onChange={this.handleChange} />
-                <button onClick={this.handleSubmit}>Add Book</button>
-            </div>
+                <input className={styles.input} type="text" value={this.state.textValue} onChange={this.handleChange} />
+                <button className={styles.button} onClick={this.handleSubmit}>Add Book</button>
+            </Grid>
         )
     }
 }

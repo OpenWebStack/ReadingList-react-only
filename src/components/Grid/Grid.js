@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import styles from './styles.css';
+import React from 'react';
 
 const Grid = ({className, columns="1fr 1fr", rows="auto", gap="10", ...props}) => {
     

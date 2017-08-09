@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './styles.css';
 import Star from "../Star";
 
-const rate = (onRate, color, index) => (
-    onRate(color.id, index)
-)
-
-const Rating = ({color, selected = 0, total = 5, onRate}) => (
+const Rating = ({ itemId, selected = 0, total = 5, onRate }) => (
     <div className={styles.rating}>
         {
             [...Array(total)].map( (n, i) => (
                 <Star
                     key={i}
+                    starId={i}
+                    itemId={itemId}
                     selected={i < selected}
-                    onClick={rate(onRate, color, i + 1)}
+                    onRate={onRate}
                 />
             ))
         }
-        <p>{selected} of {total}</p>
+        <p className={styles.totalStars} >{selected} of {total}</p>
     </div>
 );
 

@@ -45,6 +45,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.0",
+    "@storybook/addon-knobs": "^3.2.0",
     "@storybook/react": "^3.2.3"
   },
   "scripts": {
