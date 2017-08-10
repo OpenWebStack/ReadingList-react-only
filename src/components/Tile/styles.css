@@ -10,26 +10,29 @@
 }
 
 .grid:hover {
-    background-color: hsla(275, 100%, 25%, 0.07);
-    outline: 2px solid lightblue;
+    background-color: hsla(0, 100%, 90%, 0.07);
+    outline: 2px solid purple;
 }
 
 .content {
-    max-height: 250px;
     padding: 10px;
     overflow: scroll;
+    text-overflow: ellipsis;
     border: 2px solid #efefef;
+    max-height: 440px;
 
     transition: all 0.3s ease-in-out;
 }
 
 .section {
+    overflow: scroll;
     tansition: all 0.3s ease-in-out;
 }
 
 .image {
     grid-column: 1 / span 1;
     width: 100%;
+    max-height: 400px;
 }
 
 .title {

@@ -49,7 +49,8 @@ class ReadingListContainer extends Component {
                     bookList: {
                         ...bookList,
                         myBooks: [
-                            ...myBooks.concat(response.isbn)
+                            ...[].concat(response.isbn, myBooks)
+                            // ...myBooks.concat(response.isbn)
                         ],
                         books: {
                             ...books,
