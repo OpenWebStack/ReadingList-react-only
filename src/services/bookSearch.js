@@ -1,3 +1,5 @@
+//region Transforms
+
 var transformData = ({
   items
 }) => {
@@ -25,6 +27,10 @@ var transformData = ({
   }
 }
 
+//endregion
+
+//region Fetch Services
+
 export default (bookTitleOrIsbn) => {
   let url = `https://www.googleapis.com/books/v1/volumes?q=${bookTitleOrIsbn}`;
 
@@ -37,3 +43,5 @@ export default (bookTitleOrIsbn) => {
       return transformData(data);
     });
 }
+
+//endregion

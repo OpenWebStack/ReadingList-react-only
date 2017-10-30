@@ -1,9 +1,15 @@
+//region Imports
+
 import React, { Component } from "react";
 import styles from "./styles.css";
 import SimpleForm from "../SimpleForm";
 import TileList from "../TileList";
 import searchForBook from "../../services/bookSearch";
 import { title, imgSrc, meta, body } from "../../MockData";
+
+//endregion
+
+//region Initial State
 
 const initialState = {
     myBooks: ["0760348596"],
@@ -22,7 +28,13 @@ const initialState = {
     }
 };
 
+//endregion
+
+//region Components
 class ReadingListContainer extends Component {
+    
+    //region Constructor
+
     constructor(props) {
         super(props);
 
@@ -35,6 +47,10 @@ class ReadingListContainer extends Component {
         this.onReadToggle = this.onReadToggle.bind(this);
         this.onRate = this.onRate.bind(this);
     }
+
+    //endregion
+
+    //region Actions
 
     onAdd(searchTerm) {
         const {bookList} = this.state;
@@ -131,6 +147,9 @@ class ReadingListContainer extends Component {
         return data;
     }
 
+    //endregion
+
+    //region Render
     render() {
         const myBooks = this.getMyBooks();
 
@@ -146,6 +165,10 @@ class ReadingListContainer extends Component {
             </div>
         );
     }
+
+    //endregion
 }
 
 export default ReadingListContainer;
+
+//endregion
